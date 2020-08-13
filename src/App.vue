@@ -64,18 +64,21 @@ nav{
 
 #name{
     margin-right: 700px;
-    margin-left: -500px;
+    margin-left: -20px;
     position: absolute;
+    font-weight: bold;
     
 }
 
 #image_profile{
     margin-right: 700px;
-    margin-left: -350px;
+    margin-left: -75px;
+    margin-top: 6px;
     position: absolute;
     width: 50px;
     height: 50px;
     border-radius:100%;
+    object-fit: cover;
     
 }
 

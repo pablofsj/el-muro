@@ -11,7 +11,7 @@
         <div class="row">
           <div class="input-field col m12 s12">
             <i class="material-icons prefix">account_circle</i>
-            <input type="text" required class="validate"  maxlength="30" v-model="register_name">
+            <input type="text" required class="validate"  maxlength="15" v-model="register_name">
             <label for="name">Nombre</label>
           </div>
         </div>
@@ -73,9 +73,7 @@
           </div>
         </div>
       </form>
-    </div>
-    
-    
+    </div>  
   </div>       
 </template>
 

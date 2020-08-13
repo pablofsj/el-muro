@@ -1,7 +1,24 @@
 <template>
-  <div>
-    <h1>Buen día!!! {{user.name}} </h1>
-  </div>
+  <div class="container">
+    <div class="row">
+      <form action="" @submit.prevent="addpost" class="col s12 m12 ">
+        <h4>Agrega un nuevo post </h4>
+        <h4 class="post_header"></h4>
+        <br>
+        <div class="row">
+          <div class="input-field col m12 s12">
+            <textarea id="textarea1" class="materialize-textarea validate" required maxlength="150" v-model="register_name" ></textarea>
+            <label for="textarea1">Escribe aquí lo que quieras, {{user.name}}...</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col m12 s12">
+            <button type="submit" class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons right">add</i></button>
+          </div>
+        </div>
+      </form>
+    </div> 
+  </div>       
 </template>
 
 <script>
