@@ -7,9 +7,9 @@
       <a v-if="user" id="name"> {{user.name}} </a>
       <img v-if="user" id="image_profile" :src= "user.imageurl" alt="">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li v-if="user"><router-link v-bind:to="{ name: 'success' }">Muro</router-link></li>
-        <li><router-link v-bind:to="{ name: 'auth' }">Login/Registro</router-link></li>
-        <li v-if="user" @click.prevent="logout"><router-link v-bind:to="{ name: 'auth' }">Salir</router-link></li>
+        <li class="li_navbar" v-if="user"><router-link v-bind:to="{ name: 'success' }">Muro</router-link></li>
+        <li class="li_navbar"><router-link v-bind:to="{ name: 'auth' }">Login/Registro</router-link></li>
+        <li class="li_navbar" v-if="user" @click.prevent="logout"><router-link v-bind:to="{ name: 'auth' }">Salir</router-link></li>
       </ul>
     </div>
     </nav>
@@ -52,6 +52,7 @@ export default {
 }
 nav{
   position: fixed;
+  z-index:9999
 }
 
 #logo{
@@ -82,7 +83,7 @@ nav{
     
 }
 
-li{
+.li_navbar{
   position: sticky;
 }
 

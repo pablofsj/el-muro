@@ -39,8 +39,8 @@
         <div class="row">
           <div class="input-field col m12 s12">
             <i class="material-icons prefix">image</i>
-            <input type="text" required class="validate" v-model="register_url_image">
-            <label for="url_image">URL Imagen de perfil</label>
+            <input type="url" required class="validate" v-model="register_url_image">
+            <label for="url_image">URL Imagen de perfil (La URL debe finalizar en .jpeg, .jpg, .gif o .png )</label>
           </div>
         </div>
         <div class="row">
@@ -113,13 +113,18 @@ export default {
         confirm_pass.setCustomValidity('Ambas contraseñas deben coincidir') ;
         return;
       }
-      // Luego de validar, ahora se puede hacer registro del usuario mediante la accion que corresponde
-       
+      
+      if (this.register_url_image.match(/\.(jpeg|jpg|gif|png)$/) == null) {
+        this.register_url_image = 'https://frantchurch.org/images/content/2433/809193.png'
 
+      }
+
+      // Luego de validar, ahora se puede hacer registro del usuario mediante la accion que corresponde
       const datos = {
         name: this.register_name,
         email: this.register_email, 
         password: this.register_password,
+        
         imageurl: this.register_url_image
       };
       
